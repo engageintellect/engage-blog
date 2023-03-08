@@ -74,7 +74,22 @@
 
 .notion-collection-card {
   border-radius: 5px;
+  background: #fff;
+  box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffff;
+  transition: all 0.25s ease-in-out;
+}
+
+.notion-collection-card:hover {
+  transform: scale(1.0075);
+  transition: transform 0.25s ease-in-out;
+  background-color: var(--bg-color);
+}
+
+.dark-mode .notion-collection-card {
+  border-radius: 5px;
+  background: #27272a;
   box-shadow: none;
+  transition: transform 0.25s ease-in-out;
 }
 
 .notion-collection-card-cover img {
@@ -92,13 +107,20 @@
 
 .notion-collection-card-cover {
   border-bottom: 0 none;
-  transition: filter 150ms linear;
-  filter: none;
+  transition: filter 0.25s ease-in-out;
+  filter: saturate(70%);
 }
 
 .notion-collection-card:hover .notion-collection-card-cover {
   transition: filter 0.25s linear;
-  filter: brightness(120%);
+  /* filter: brightness(110%); */
+  filter: saturate(125%);
+  transition: all 0.25s ease-in-out;
+}
+
+.dark-mode .notion-collection-card:hover {
+  background-color: var(--bg-color-0);
+  transition: all 0.25s ease-in-out;
 }
 
 .notion-collection-card-body {
@@ -192,6 +214,14 @@
 .notion-page-cover-wrapper img {
   max-width: 1200px !important;
   border-radius: 16px;
+
+  box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffff;
+}
+
+.dark-mode .notion-page-cover-wrapper,
+.notion-page-cover-wrapper span,
+.notion-page-cover-wrapper img {
+  box-shadow: 2px 2px 8px 4px rgba(15, 15, 15, 0.1);
 }
 
 .notion-page-cover-wrapper {
@@ -345,8 +375,8 @@
 
 /* if you don't want rounded page icon images, remove this */
 .notion-page-icon-hero.notion-page-icon-image {
-  border-radius: 50px;
-  box-shadow: 0 8px 40px 0 rgb(0 0 0 / 21%);
+  border-radius: 50%;
+  box-shadow: 0 2px 50px 0 rgba(0 0 0 / 91%);
 }
 .notion-page-icon-hero.notion-page-icon-image span,
 .notion-page-icon-hero.notion-page-icon-image img {

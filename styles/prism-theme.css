@@ -8,11 +8,11 @@
 }
 
 .dark-mode .notion-code {
-  background-color: rgba(17, 24, 39, 1);
-  border-color: rgba(55, 65, 81, 1);
+  background-color: var(--bg-color-0);
+  border-color: var(--bg-color-1);
 }
 .notion code {
-  color: rgba(31, 41, 55, 1);
+  color: red;
   border: 0 none !important;
   box-shadow: none !important;
   background: none !important;
