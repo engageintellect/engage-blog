@@ -21,6 +21,7 @@ export default class MyDocument extends Document {
           </Head>
 
           <body>
+            {/* TODO: THIS IS SKETCHY */}
             <script
               dangerouslySetInnerHTML={{
                 __html: `
